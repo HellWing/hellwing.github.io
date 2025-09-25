@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Wojciech A. Hellwing"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: software.qmd
+        text: Software & Data
+      - href: teaching.qmd
+        text: Teaching
+      - href: contact.qmd
+        text: Contact
+format:
+  html:
+    theme: cosmo
+    toc: true

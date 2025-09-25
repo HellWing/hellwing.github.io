@@ -1,0 +1,14 @@
+---
+title: "Publications"
+filters:
+  - quarto
+bibliography: pubs.bib
+---
+
+::: {#pubs}
+:::
+
+```{r}
+{=latex}
+::: {#refs}
+:::
