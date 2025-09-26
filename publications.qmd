@@ -1,7 +1,6 @@
 ---
 title: Publications
 bibliography: pubs.bib
-csl: assets/styles/nature.csl
 nocite: |
   @*
 ---
