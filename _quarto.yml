@@ -50,3 +50,6 @@ format:
 metadata-files:
   - _meta.yml
 
+website:
+  favicon: assets/favicon.png
+

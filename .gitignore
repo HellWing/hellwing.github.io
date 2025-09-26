@@ -1,0 +1,10 @@
+# Quarto build outputs
+_site/
+.quarto/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.Rhistory
+.Rproj.user/
+*.swp
