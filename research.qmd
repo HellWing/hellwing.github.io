@@ -1,3 +1,19 @@
-## Research
+---
+title: Research
+---
 
-Draft content.
+This page sketches the program, organized in three strands.
+
+### Simulation campaigns {#simulation-campaigns}
+- MG Millennium, COLAVERSE, ELEPHANT, gravity only and hydro runs spanning f(R), nDGP, WDM, neutrinos, dynamical dark energy.  
+- Tools: MG COLA, ECOSMOG, SWIFT with MG in progress, MIMIC for constrained initial conditions.  
+- Public components with documentation and sample data products.
+
+### Novel statistics {#novel-statistics}
+- Ellipsoidal counts in cells skewness in redshift space, anisotropic cumulants.  
+- Pairwise velocity distributions as physical probes, environment stratified growth tests.
+
+### Cosmic Web methodology {#cosmic-web}
+- CACTUS: V web, T web, NEXUS+ with universal thresholds.  
+- Dual scale labels, classifier uncertainty, and environment aware inference.
+

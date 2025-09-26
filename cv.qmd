@@ -1,0 +1,15 @@
+---
+title: CV
+format:
+  html:
+    toc: false
+---
+
+**Download:** <a class="btn btn-primary" href="assets/W_Hellwing_CV.pdf">PDF</a>
+
+- Positions and appointments  
+- Grants and awards  
+- Invited talks and plenaries  
+- Committees and leadership  
+- Service and outreach
+

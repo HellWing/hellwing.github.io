@@ -1,15 +1,15 @@
 ---
-title: "Publications"
+title: Publications
 bibliography: pubs.bib
+csl: assets/styles/nature.csl
 nocite: |
   @*
-# Optional: pick a CSL style; comment out if you don't care now
-# csl: https://www.zotero.org/styles/apa
-format:
-  html:
-    toc: true
 ---
 
-Below is the current list generated from the BibTeX file.
+::: {.pub-note}
+The full list below is auto rendered from NASA ADS .bib. Selected highlights appear on the homepage.
+:::
 
-# References
+::: {#refs}
+:::
+

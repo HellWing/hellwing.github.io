@@ -1,3 +1,11 @@
-## Software
+---
+title: Software
+---
 
-Draft content.
+### Featured
+- **COWS**, Cosmic web filament finder with Python bindings and docs.  
+- **MIMIC**, Constrained realization pipeline for Local Universe reconstructions.  
+- **gridbuilder**, Fast particle to grid assignment and velocity divergence.
+
+Each repo includes a README, examples, and a Zenodo DOI on release.
+

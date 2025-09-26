@@ -1,0 +1,8 @@
+---
+title: Data
+---
+
+- COLAVERSE sample grids and halo catalogs  
+- MG Millennium derived statistics  
+- Persistent identifiers and basic usage examples
+

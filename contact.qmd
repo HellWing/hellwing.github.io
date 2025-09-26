@@ -1,3 +1,11 @@
-## Contact
+---
+title: Contact
+---
 
-Draft content.
+- Email: {{< var email >}}  
+- Affiliation: {{< var affiliation >}}  
+- Location: {{< var location >}}
+
+**Elsewhere**  
+[GitHub]({{< var github >}}) · [ADS]({{< var ads >}}) · [ORCID]({{< var orcid >}}) · [Scholar]({{< var scholar >}})
+

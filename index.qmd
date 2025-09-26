@@ -1,4 +1,62 @@
-# Welcome
+---
+title: ""
+page-layout: full
+---
 
-Short statement about your research focus, leadership, and datasets.
+<div class="hero">
+  <div class="hero-text">
+    <h1>Cosmic structure, gravity tests, and the beautiful mess of the Universe</h1>
+    <p>I am Wojtek Hellwing, cosmologist at CFT PAN in Warsaw. I study the Cosmic Web, peculiar velocities, and beyond-ΛCDM models, building simulations and statistics that stress test gravity.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="publications.qmd">Publications</a>
+      <a class="btn btn-outline-light" href="cv.qmd">Download CV</a>
+    </div>
+  </div>
+</div>
+
+::: {.grid .cards}
+::: {.g-col-12 .g-col-md-4}
+### By the numbers
+- > 120 publications  
+- h-index 30+  
+- > 6000 citations  
+- 3 major simulation suites released  
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Current focus
+- ERC Advanced proposal on environment aware growth tests  
+- COLAVERSE simulation analysis and public tools  
+- Cosmic Web classifiers with universal thresholds  
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Latest news
+- Sept 2025, new preprint on anisotropic skewness sensitivity to $f\\sigma_8$  
+- Talk: ESA Euclid Consortium seminar on peculiar velocity cosmology  
+- Data: Updated COLAVERSE README and sample grids  
+:::
+:::
+
+## Highlights
+
+::: {.grid .cards}
+::: {.g-col-12 .g-col-md-6}
+#### MG Millennium and COLAVERSE
+Large cosmological simulations for testing gravity and dark matter models, with community comparisons and public releases.  
+[Learn more »](research.qmd#simulation-campaigns)
+:::
+
+::: {.g-col-12 .g-col-md-6}
+#### Ellipsoidal cumulants and velocity probes
+New statistics that extract growth and anisotropy information with different systematics relative to standard RSD.  
+[Explore methods »](research.qmd#novel-statistics)
+:::
+:::
+
+## Featured media
+
+<div class="video-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/EdBvb3RVj" title="KIPAC@20 talk" frameborder="0" allowfullscreen></iframe>
+</div>
 

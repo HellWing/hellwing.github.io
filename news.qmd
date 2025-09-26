@@ -1,0 +1,10 @@
+---
+title: News
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+---
+
+Welcome to the news feed. Add posts as files in `posts/` with names like `2025-09-26-first-post.qmd` and a `date:` field in the YAML.
+

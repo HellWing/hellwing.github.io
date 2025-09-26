@@ -4,24 +4,46 @@ project:
 
 website:
   title: "Wojciech A. Hellwing"
-  site-url: "https://hellwing.github.io/hellwing-site/"
+  site-url: "https://hellwing.github.io/"
+  description: "Cosmologist, CFT PAN. Cosmic Web, peculiar velocities, beyond-ΛCDM."
+  repo-url: https://github.com/HellWing/hellwing.github.io
+  repo-actions: [edit, issue]
   navbar:
+    logo: assets/logo.svg
     left:
-      - href: index.qmd
-        text: Home
-      - href: research.qmd
-        text: Research
-      - href: publications.qmd
-        text: Publications
-      - href: software.qmd
-        text: Software & Data
-      - href: teaching.qmd
-        text: Teaching
-      - href: contact.qmd
-        text: Contact
+      - text: Home
+        href: index.qmd
+      - text: Research
+        href: research.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: Software
+        href: software.qmd
+      - text: Data
+        href: data.qmd
+      - text: Teaching
+        href: teaching.qmd
+      - text: Supervision
+        href: supervision.qmd
+      - text: CV
+        href: cv.qmd
+      - text: News
+        href: news.qmd
+      - text: Contact
+        href: contact.qmd
+  page-footer:
+    left: "© {{< var year >}} Wojciech A. Hellwing"
+    right: "Built with <a href=\"https://quarto.org\">Quarto</a>. Theme: Cosmo."
 
 format:
   html:
     theme: cosmo
+    css: styles.scss
     toc: true
+    smooth-scroll: true
+    code-link: false
+    anchor-sections: true
+
+metadata-files:
+  - _meta.yml
 
