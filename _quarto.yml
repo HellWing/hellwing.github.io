@@ -10,6 +10,7 @@ website:
   description: "Cosmologist, CFT PAN. Cosmic Web, peculiar velocities, beyond-ΛCDM."
   repo-url: https://github.com/HellWing/hellwing.github.io
   repo-actions: [edit, issue]
+  favicon: assets/favicon.png
   navbar:
     logo: assets/logo.svg
     left:
@@ -49,7 +50,4 @@ format:
 
 metadata-files:
   - _meta.yml
-
-website:
-  favicon: assets/favicon.png
 
