@@ -64,7 +64,7 @@ New statistics that extract growth and anisotropy information with different sys
   <img src="assets/papers/drozda2025_aniso_skew.png" alt="Anisotropic skewness" class="paper-thumb"/>
   **Anisotropic skewness probes growth**  
   Skewness of 3D ellipsoidal CiC in redshift space shows sharp sensitivity to \(f\sigma_8\) with distinct systematics vs RSD.  
-  [[paper]](publications.qmd#refs){.btn .btn-sm}
+  [[paper]](publications.html#refs-2025arXiv250601762D){.btn .btn-sm}
 </div>
 :::
 
@@ -73,7 +73,7 @@ New statistics that extract growth and anisotropy information with different sys
   <img src="assets/papers/hellwing2021_cw_conc.png" alt="CW dependence of halo concentrations" class="paper-thumb"/>
   **Cosmic-web environment matters**  
   Dwarf halo concentrations vary strongly across web elements, reframing small-scale tensions.  
-  [[paper]](publications.qmd#refs){.btn .btn-sm}
+  [[paper]](publications.html#refs-2021PhRvD.103f3517H){.btn .btn-sm}
 </div>
 :::
 
@@ -82,7 +82,7 @@ New statistics that extract growth and anisotropy information with different sys
   <img src="assets/papers/jaber2024_pv.png" alt="Pairwise velocities modeling" class="paper-thumb"/>
   **Pairwise velocities as physics**  
   Non-Gaussian PVD moments carry modified-gravity and environment info beyond nuisance treatment.  
-  [[paper]](publications.qmd#refs){.btn .btn-sm}
+  [[paper]](publications.html#refs-2024PhRvD.109l3528J){.btn .btn-sm}
 </div>
 :::
 :::

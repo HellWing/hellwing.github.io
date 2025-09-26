@@ -4,6 +4,7 @@ bibliography: pubs.bib
 csl: assets/styles/nature.csl
 nocite: |
   @*
+link-citations: true
 ---
 
 ::: {.pub-note}
