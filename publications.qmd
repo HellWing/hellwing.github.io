@@ -1,14 +1,15 @@
 ---
 title: "Publications"
-filters:
-  - quarto
 bibliography: pubs.bib
+nocite: |
+  @*
+# Optional: pick a CSL style; comment out if you don't care now
+# csl: https://www.zotero.org/styles/apa
+format:
+  html:
+    toc: true
 ---
 
-::: {#pubs}
-:::
+Below is the current list generated from the BibTeX file.
 
-```{r}
-{=latex}
-::: {#refs}
-:::
+# References
