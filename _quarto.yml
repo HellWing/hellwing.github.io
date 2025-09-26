@@ -40,7 +40,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.scss
+    css: styles.css
     toc: true
     smooth-scroll: true
     code-link: false
