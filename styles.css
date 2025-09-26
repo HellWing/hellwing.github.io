@@ -59,16 +59,29 @@
   box-shadow: 0 6px 22px rgba(0,0,0,0.08);
 }
 
+/* Paper cards grid */
+.paper-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+* Uniform, responsive thumbnails (cropped if needed) */
 .paper-thumb {
+  display: block;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;   /* consistent tile shape */
+  object-fit: cover;       /* crop to fill the box */
   border-radius: 0.75rem;
-  margin-bottom: .5rem;
   box-shadow: 0 4px 16px rgba(0,0,0,.08);
 }
 
+/* Prevent overflow in cards, keep layout tidy */
+.cards .card { overflow: hidden; }
 
+/* Slightly denser layout on large screens */
+@media (min-width: 992px) {
+  .paper-thumb { aspect-ratio: 16 / 10; }
+}
 @media (prefers-color-scheme: dark) {
   .cards .card { box-shadow: 0 8px 22px rgba(0,0,0,.25); }
 }
