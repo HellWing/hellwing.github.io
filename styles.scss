@@ -3,16 +3,24 @@
 .navbar-brand, .navbar-nav .nav-link { font-weight: 600; }
 
 /* ===== Hero banner ===== */
+
+/* Portrait in hero */
+.hero .portrait {
+  width: 112px;
+  height: 112px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.85);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Ensure starfield path stays correct */
 .hero {
-  /* use absolute path so it works on GitHub Pages root */
   background:
     radial-gradient(1000px 500px at 20% 20%, rgba(0,179,255,.25), transparent),
     radial-gradient(800px 400px at 80% 10%, rgba(43,108,176,.25), transparent),
-    url('/assets/hero-stars.svg');
-  color: white;
-  padding: 4rem 1rem;
-  border-radius: 1rem;
-  margin-bottom: 1.5rem;
 }
 .hero p { max-width: 60ch; font-size: 1.125rem; opacity: 0.95; }
 .hero .btn { margin-right: .5rem; }

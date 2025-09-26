@@ -4,6 +4,7 @@ page-layout: full
 ---
 
 ::: {.hero}
+![Wojciech A. Hellwing](assets/portrait.jpg){.portrait}
 # Cosmic structure, gravity tests, and the beautiful mess of the Universe
 
 I am Wojtek Hellwing, cosmologist at CFT PAN in Warsaw. I study the Cosmic Web, peculiar velocities, and beyond-ΛCDM models, building simulations and statistics that stress test gravity.
