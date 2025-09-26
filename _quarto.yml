@@ -43,6 +43,7 @@ format:
     smooth-scroll: true
     code-link: false
     anchor-sections: true
+    sanitize: false
 
 metadata-files:
   - _meta.yml

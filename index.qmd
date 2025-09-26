@@ -3,18 +3,16 @@ title: ""
 page-layout: full
 ---
 
-<div class="hero">
-  <div class="hero-text">
-    <h1>Cosmic structure, gravity tests, and the beautiful mess of the Universe</h1>
-    <p>I am Wojtek Hellwing, cosmologist at CFT PAN in Warsaw. I study the Cosmic Web, peculiar velocities, and beyond-ΛCDM models, building simulations and statistics that stress test gravity.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="publications.qmd">Publications</a>
-      <a class="btn btn-outline-light" href="cv.qmd">Download CV</a>
-    </div>
-  </div>
-</div>
+::: {.hero}
+# Cosmic structure, gravity tests, and the beautiful mess of the Universe
+
+I am Wojtek Hellwing, cosmologist at CFT PAN in Warsaw. I study the Cosmic Web, peculiar velocities, and beyond-ΛCDM models, building simulations and statistics that stress test gravity.
+
+[Publications](publications.qmd){.btn .btn-primary} [Download CV](cv.qmd){.btn .btn-outline-light}
+:::
 
 ::: {.grid .cards}
+
 ::: {.g-col-12 .g-col-md-4}
 ### By the numbers
 - > 120 publications  
@@ -36,6 +34,7 @@ page-layout: full
 - Talk: ESA Euclid Consortium seminar on peculiar velocity cosmology  
 - Data: Updated COLAVERSE README and sample grids  
 :::
+
 :::
 
 ## Highlights
