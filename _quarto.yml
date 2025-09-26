@@ -5,7 +5,20 @@ project:
 website:
   title: "Wojciech A. Hellwing"
   site-url: "https://hellwing.github.io/hellwing-site/"
-  base-url: "/hellwing-site/"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: software.qmd
+        text: Software & Data
+      - href: teaching.qmd
+        text: Teaching
+      - href: contact.qmd
+        text: Contact
 
 format:
   html:
