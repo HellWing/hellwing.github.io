@@ -56,33 +56,31 @@ New statistics that extract growth and anisotropy information with different sys
 
 ## Selected papers
 
-## Selected papers
-
 ::: {.grid .cards}
 ::: {.g-col-12 .g-col-md-4}
 <div class="paper-card">
-  <img src="assets/papers/drozda2025_aniso_skew.png" alt="Anisotropic skewness" class="paper-thumb"/>
+  <img src="assets/papers/drozda2025_aniso_skew.png" alt="Anisotropic skewness" class="paper-thumb" loading="lazy"/>
   **Anisotropic skewness probes growth**  
   Skewness of 3D ellipsoidal CiC in redshift space shows sharp sensitivity to \(f\sigma_8\) with distinct systematics vs RSD.  
-  [[paper]](publications.html#refs-2025arXiv250601762D){.btn .btn-sm}
+  [[paper]](publications.html#ref-2025arXiv250601762D){.btn .btn-sm}
 </div>
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 <div class="paper-card">
-  <img src="assets/papers/hellwing2021_cw_conc.png" alt="CW dependence of halo concentrations" class="paper-thumb"/>
+  <img src="assets/papers/hellwing2021_cw_conc.png" alt="CW dependence of halo concentrations" class="paper-thumb" loading="lazy"/>
   **Cosmic-web environment matters**  
   Dwarf halo concentrations vary strongly across web elements, reframing small-scale tensions.  
-  [[paper]](publications.html#refs-2021PhRvD.103f3517H){.btn .btn-sm}
+  [[paper]](publications.html#ref-2021PhRvD.103f3517H){.btn .btn-sm}
 </div>
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 <div class="paper-card">
-  <img src="assets/papers/jaber2024_pv.png" alt="Pairwise velocities modeling" class="paper-thumb"/>
+  <img src="assets/papers/jaber2024_pv.png" alt="Pairwise velocities modeling" class="paper-thumb" loading="lazy"/>
   **Pairwise velocities as physics**  
   Non-Gaussian PVD moments carry modified-gravity and environment info beyond nuisance treatment.  
-  [[paper]](publications.html#refs-2024PhRvD.109l3528J){.btn .btn-sm}
+  [[paper]](publications.html#ref-2024PhRvD.109l3528J){.btn .btn-sm}
 </div>
 :::
 :::
@@ -99,7 +97,4 @@ New statistics that extract growth and anisotropy information with different sys
   </iframe>
 </div>
 
-<div class="video-embed">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/XQ7lCcKRS9U" title="CosmoVerse@Krakow talk" frameborder="0" allowfullscreen></iframe>
-</div>
 

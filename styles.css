@@ -65,7 +65,7 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-* Uniform, responsive thumbnails (cropped if needed) */
+/* Uniform, responsive thumbnails (cropped if needed) */
 .paper-thumb {
   display: block;
   width: 100%;
@@ -85,6 +85,12 @@
 @media (prefers-color-scheme: dark) {
   .cards .card { box-shadow: 0 8px 22px rgba(0,0,0,.25); }
 }
+
+/* Keep iframes clean */
+.video-embed iframe { border: 0; }
+
+/* Make sure card images can’t spill */
+.cards .card { overflow: hidden; }
 
 /* ===== Responsive video ===== */
 .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; }
