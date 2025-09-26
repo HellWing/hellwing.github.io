@@ -88,6 +88,16 @@ New statistics that extract growth and anisotropy information with different sys
 :::
 
 ## Featured media
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/XQ7lCcKRS9U?rel=0"
+    title="CosmoVerse@Cracow"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
 
 <div class="video-embed">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/XQ7lCcKRS9U" title="CosmoVerse@Krakow talk" frameborder="0" allowfullscreen></iframe>
