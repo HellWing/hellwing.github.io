@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32">
-  <rect width="120" height="32" fill="#2b6cb0"></rect>
-  <text x="8" y="22" font-family="Arial" font-size="16" fill="#ffffff">WH</text>
+  <rect width="120" height="32" fill="#2b6cb0"/>
+  <text x="8" y="22" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#ffffff">WH</text>
 </svg>
