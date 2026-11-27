@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "**/*.qmd"
   resources:
     - assets/**
 
@@ -47,7 +49,4 @@ format:
     code-link: false
     anchor-sections: true
     sanitize: false
-
-metadata-files:
-  - _meta.yml
 

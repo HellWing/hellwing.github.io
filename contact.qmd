@@ -2,10 +2,10 @@
 title: Contact
 ---
 
-- Email: {{< var email >}}  
+- Email: [{{< var email >}}](mailto:{{< var email >}})
 - Affiliation: {{< var affiliation >}}  
 - Location: {{< var location >}}
 
 **Elsewhere**  
-[GitHub]({{< var github >}}) · [ADS]({{< var ads >}}) · [ORCID]({{< var orcid >}}) · [Scholar]({{< var scholar >}})
+[GitHub]({{< var github >}}) · [ADS](https://ui.adsabs.harvard.edu/search/q=orcid%3A{{< var orcid >}}) · [ORCID](https://orcid.org/{{< var orcid >}}) · [Scholar]({{< var scholar >}})
 
