@@ -17,6 +17,10 @@ REQUIRED_PAGES = (
     "news.html", "posts/2025-09-26-site-refresh.html", "publications.html",
     "research.html", "software.html", "supervision.html", "teaching.html",
 )
+RESEARCH_FIGURES = (
+    "assets/science/cows-v-web.png",
+    "assets/science/cows-filament-spines.png",
+)
 REQUIRED_ASSETS = (
     "assets/W_Hellwing_CV.pdf",
     "assets/Hellwing_CV_04_2024.pdf",
@@ -26,12 +30,42 @@ REQUIRED_ASSETS = (
     "assets/papers/drozda2025_aniso_skew.png",
     "assets/papers/hellwing2021_cw_conc.png",
     "assets/papers/jaber2024_pv.png",
+    *RESEARCH_FIGURES,
+    "assets/science/cows-license.txt",
 )
 SELECTED_PAPERS = (
     "ref-2025arXiv250601762D",
     "ref-2021PhRvD.103f3517H",
     "ref-2024PhRvD.109l3528J",
 )
+RESEARCH_PILLARS = ("novel-statistics", "simulation-campaigns", "cosmic-web")
+RESEARCH_SECTIONS = (*RESEARCH_PILLARS, "computational-foundation")
+RESEARCH_PAPERS = {
+    "10.1103/PhysRevLett.112.221102": "2014PhRvL.112v1102H",
+    "10.1103/PhysRevD.109.123528": "2024PhRvD.109l3528J",
+    "10.1103/PhysRevD.107.083525": "2023PhRvD.107h3525G",
+    "10.1103/PhysRevD.105.043538": "2022PhRvD.105d3538G",
+    "10.1103/PhysRevD.103.103524": "2021PhRvD.103j3524G",
+    "10.1103/4sxk-z8z4": "2025arXiv250412820D",
+    "10.1103/71cc-223l": "2025arXiv250601762D",
+    "10.1103/PhysRevD.107.043533": "2023PhRvD.107d3533N",
+    "10.1103/PhysRevD.109.083511": "2024PhRvD.109h3511N",
+    "10.1093/mnrasl/slw081": "2016MNRAS.461L..11H",
+    "10.1093/mnras/stw214": "2016MNRAS.457.3492H",
+    "10.1093/mnras/stw2686": "2017MNRAS.464.4520B",
+    "10.1093/mnras/stw1046": "2016MNRAS.460.1214L",
+    "10.3847/1538-4357/ad011d": "2023ApJ...958..166W",
+    "10.1093/mnras/stab2452": "2021MNRAS.507.4826L",
+    "10.1093/mnras/staa2525": "2020MNRAS.498..702L",
+    "10.1093/mnras/stab3524": "2022MNRAS.511.4044D",
+    "10.1051/0004-6361/202453376": "2025A&A...696A.142O",
+    "10.1093/mnras/stac1382": "2022MNRAS.514..470P",
+    "10.1103/PhysRevD.103.063517": "2021PhRvD.103f3517H",
+    "10.1051/0004-6361/202452246": "2025A&A...700A..65H",
+    "10.1093/mnras/stad3347": "2024MNRAS.527.4087J",
+    "10.1103/PhysRevD.106.023521": "2022PhRvD.106b3521C",
+    "10.1103/PhysRevD.110.083520": "2024PhRvD.110h3520G",
+}
 EXPECTED_BIBLIOGRAPHY_ENTRIES = 98
 
 ORCID_ID = r"\d{4}-\d{4}-\d{4}-\d{3}[\dX]"
@@ -59,8 +93,10 @@ class Page(HTMLParser):
     def __init__(self, html):
         super().__init__()
         self.anchors = set()
+        self.sections = set()
         self.citations = set()
         self.references = set()
+        self.images = {}
         self.links = []
         self.link = None
         self.in_style = False
@@ -72,6 +108,8 @@ class Page(HTMLParser):
         identifier = attrs.get("id", "")
         if identifier:
             self.anchors.add(identifier)
+            if tag == "section":
+                self.sections.add(identifier)
         if identifier.startswith("ref-") and "csl-entry" in attrs.get("class", "").split():
             self.citations.add(identifier)
         if tag == "a":
@@ -81,6 +119,8 @@ class Page(HTMLParser):
                 self.link = (attrs["href"], [])
         if tag == "style":
             self.in_style = True
+        if tag == "img" and "src" in attrs:
+            self.images[attrs["src"]] = attrs.get("alt", "")
 
         fields = ["href", "src", "poster", "xlink:href"]
         if tag == "object":
@@ -151,6 +191,33 @@ def check_contact(page):
     return errors
 
 
+def check_research(research, home):
+    errors = []
+    links = {href for _, href in research.links}
+    for identifier in RESEARCH_SECTIONS:
+        if identifier not in research.sections:
+            errors.append(f"research.html: missing research section #{identifier}")
+        if f"#{identifier}" not in links:
+            errors.append(f"research.html: missing in-page link to #{identifier}")
+    for doi in RESEARCH_PAPERS:
+        if f"https://doi.org/{doi}" not in links:
+            errors.append(f"research.html: missing published DOI {doi}")
+    for figure in RESEARCH_FIGURES:
+        if not research.images.get(figure, "").strip():
+            errors.append(f"research.html: missing image or alt text for {figure}")
+    if home:
+        if "research" not in home.anchors:
+            errors.append("index.html: missing research section #research")
+        home_links = {(label, href.removeprefix("./")) for label, href in home.links}
+        if ("Research", "research.html") not in home_links:
+            errors.append("index.html: Research navigation must link to research.html")
+        destinations = {url for _, url in home_links}
+        for identifier in RESEARCH_PILLARS:
+            if f"research.html#{identifier}" not in destinations:
+                errors.append(f"index.html: missing pillar link to research.html#{identifier}")
+    return errors
+
+
 def validate_output(site):
     site = site.resolve()
     pages = {}
@@ -183,6 +250,9 @@ def validate_output(site):
     contact = pages.get(Path("contact.html"))
     if contact:
         errors.extend(check_contact(contact))
+    research = pages.get(Path("research.html"))
+    if research:
+        errors.extend(check_research(research, pages.get(Path("index.html"))))
     publications = pages.get(Path("publications.html"))
     if publications:
         count = len(publications.citations)
@@ -194,6 +264,9 @@ def validate_output(site):
         for identifier in SELECTED_PAPERS:
             if identifier not in publications.citations:
                 errors.append(f"publications.html: missing selected-paper anchor #{identifier}")
+        for key in RESEARCH_PAPERS.values():
+            if f"ref-{key}" not in publications.citations:
+                errors.append(f"publications.html: missing research-paper anchor #ref-{key}")
     return errors
 
 
@@ -218,7 +291,7 @@ def main():
         for error in errors:
             print(error, file=sys.stderr)
         return 1
-    print("Site validation passed (render, local links and assets, Contact URLs, bibliography).")
+    print("Site validation passed (render, local links and assets, Contact URLs, Research, bibliography).")
     return 0
 
 

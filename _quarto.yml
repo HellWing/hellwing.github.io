@@ -19,7 +19,7 @@ website:
     foreground: "#172B3B"
     left:
       - text: Research
-        href: index.qmd#research
+        href: research.qmd
       - text: Projects
         href: index.qmd#projects
       - text: Publications
