@@ -2,11 +2,11 @@
 title: Teaching
 ---
 
-### Recent courses
+## Recent courses
 - Large Scale Structure and Cosmological Inference, CFT PAN  
 - Introduction to Computational Cosmology  
 
-### Assignments and materials
+## Assignments and materials
 - Redshift space distortions with CorrFunc and pyCorr  
 - Mock catalogs with peculiar velocities  
 - Reading lists with PDFs and videos

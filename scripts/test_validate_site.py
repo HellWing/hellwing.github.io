@@ -32,7 +32,10 @@ class OutputTests(unittest.TestCase):
 
     def test_clean_build_and_private_docs(self):
         self.assertEqual(validate_site.validate_output(self.site), [])
-        for name in ("AGENTS.md", "AGENTS.html", "CONTRIBUTING.md", "CONTRIBUTING.html"):
+        for name in (
+            "AGENTS.md", "AGENTS.html", "CONTRIBUTING.md", "CONTRIBUTING.html",
+            "ASSET_PROVENANCE.md", "ASSET_PROVENANCE.html",
+        ):
             self.assertFalse((self.site / name).exists())
 
     def test_unresolved_variable_in_generated_html(self):
@@ -51,11 +54,16 @@ class OutputTests(unittest.TestCase):
         self.assert_rejected("index.html: missing fragment #missing in research.html")
 
     def test_missing_linked_scientific_graphic(self):
-        (self.site / "assets/papers/jaber2024_pv.png").unlink()
-        self.assert_rejected("index.html: missing local target 'assets/papers/jaber2024_pv.png'")
+        figure = "assets/papers/jaber2024_pv.png"
+        self.replace("index.html", "</main>", f'<img src="{figure}" alt="Figure"></main>')
+        self.assertEqual(validate_site.validate_output(self.site), [])
+        (self.site / figure).unlink()
+        self.assert_rejected(f"index.html: missing local target '{figure}'")
+        self.assert_rejected(f"Missing or empty generated asset {figure}")
 
     def test_missing_css_asset(self):
-        self.replace("styles.css", "assets/hero-stars.svg", "assets/missing.svg")
+        with (self.site / "styles.css").open("a", encoding="utf-8") as css:
+            css.write("\n.example { background-image: url('assets/missing.svg'); }\n")
         self.assert_rejected("styles.css: missing local target 'assets/missing.svg'")
 
     def test_missing_legacy_cv(self):

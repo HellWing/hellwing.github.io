@@ -14,39 +14,54 @@ website:
   repo-actions: [edit, issue]
   favicon: assets/favicon.png
   navbar:
-    logo: assets/logo.svg
+    pinned: true
+    background: white
+    foreground: "#172B3B"
     left:
-      - text: Home
-        href: index.qmd
       - text: Research
-        href: research.qmd
+        href: index.qmd#research
+      - text: Projects
+        href: index.qmd#projects
       - text: Publications
         href: publications.qmd
-      - text: Software
-        href: software.qmd
-      - text: Data
-        href: data.qmd
-      - text: Teaching
-        href: teaching.qmd
-      - text: Supervision
-        href: supervision.qmd
+      - text: People
+        href: index.qmd#people
+      - text: Profile
+        href: index.qmd#profile
+      - text: Outreach
+        href: index.qmd#outreach
+      - text: More
+        menu:
+          - text: Software
+            href: software.qmd
+          - text: Data
+            href: data.qmd
+          - text: Teaching
+            href: teaching.qmd
+          - text: Supervision
+            href: supervision.qmd
+          - text: News
+            href: news.qmd
+          - text: Contact
+            href: contact.qmd
+    right:
       - text: CV
         href: cv.qmd
-      - text: News
-        href: news.qmd
-      - text: Contact
-        href: contact.qmd
   page-footer:
-    left: "© {{< var year >}} Wojciech A. Hellwing"
-    right: "Built with <a href=\"https://quarto.org\">Quarto</a>. Theme: Cosmo."
+    left: |
+      **Wojciech A. Hellwing**\
+      {{< var affiliation >}}\
+      {{< var location >}}
+    right: |
+      [Contact](/contact.html) · [About](/about.html) · [Source repository](https://github.com/HellWing/hellwing.github.io)
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, theme.scss]
+    html-math-method: mathml
     css: styles.css
     toc: true
     smooth-scroll: true
     code-link: false
     anchor-sections: true
     sanitize: false
-

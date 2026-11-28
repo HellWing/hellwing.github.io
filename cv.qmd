@@ -5,7 +5,7 @@ format:
     toc: false
 ---
 
-**Download:** <a class="btn btn-primary" href="assets/W_Hellwing_CV.pdf">PDF</a>
+**Download:** [PDF](assets/W_Hellwing_CV.pdf){.btn .btn-primary .cv-download}
 
 - Positions and appointments  
 - Grants and awards  
