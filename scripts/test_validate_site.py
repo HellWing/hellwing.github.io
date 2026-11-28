@@ -35,6 +35,7 @@ class OutputTests(unittest.TestCase):
         for name in (
             "AGENTS.md", "AGENTS.html", "CONTRIBUTING.md", "CONTRIBUTING.html",
             "ASSET_PROVENANCE.md", "ASSET_PROVENANCE.html",
+            "_review",
         ):
             self.assertFalse((self.site / name).exists())
 
@@ -52,6 +53,39 @@ class OutputTests(unittest.TestCase):
             '<a href="https://hellwing.github.io/research.html#missing">Missing</a></main>',
         )
         self.assert_rejected("index.html: missing fragment #missing in research.html")
+
+    def test_missing_research_section(self):
+        self.replace("research.html", 'id="novel-statistics"', 'id="changed-section"')
+        self.assert_rejected("research.html: missing research section #novel-statistics")
+
+    def test_missing_research_index_link(self):
+        self.replace("research.html", 'href="#computational-foundation"', 'href="#top"')
+        self.assert_rejected("research.html: missing in-page link to #computational-foundation")
+
+    def test_missing_homepage_pillar_link(self):
+        self.replace("index.html", 'href="./research.html#cosmic-web"', 'href="./research.html"')
+        self.assert_rejected("index.html: missing pillar link to research.html#cosmic-web")
+
+    def test_missing_published_research_doi(self):
+        self.replace("research.html", 'href="https://doi.org/10.1103/71cc-223l"', 'href="#top"')
+        self.assert_rejected("research.html: missing published DOI 10.1103/71cc-223l")
+
+    def test_missing_research_bibliography_anchor(self):
+        self.replace("publications.html", 'id="ref-2025A&amp;A...700A..65H"', 'id="ref-other"')
+        self.assert_rejected("publications.html: missing research-paper anchor #ref-2025A&A...700A..65H")
+
+    def test_missing_research_figure_alt_text(self):
+        self.replace(
+            "research.html",
+            'alt="A simulation slice with green filaments and yellow knots against blue sheets and purple voids."',
+            'alt=""',
+        )
+        self.assert_rejected("research.html: missing image or alt text for assets/science/cows-v-web.png")
+
+    def test_missing_research_figure_file(self):
+        figure = "assets/science/cows-filament-spines.png"
+        (self.site / figure).unlink()
+        self.assert_rejected(f"research.html: missing local target '{figure}'")
 
     def test_missing_linked_scientific_graphic(self):
         figure = "assets/papers/jaber2024_pv.png"
