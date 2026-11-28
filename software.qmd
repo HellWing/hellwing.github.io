@@ -2,7 +2,7 @@
 title: Software
 ---
 
-### Featured
+## Featured
 - **COWS**, Cosmic web filament finder with Python bindings and docs.  
 - **MIMIC**, Constrained realization pipeline for Local Universe reconstructions.  
 - **gridbuilder**, Fast particle to grid assignment and velocity divergence.
